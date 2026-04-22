@@ -1,64 +1,33 @@
 import { Navigation } from "@/components/Navigation";
-import { DecorativeBars } from "@/components/DecorativeBars";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ArrowRight } from "@phosphor-icons/react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "@/pages/Home";
+import { About } from "@/pages/About";
+import { Areas } from "@/pages/Areas";
+import { Convocatorias } from "@/pages/Convocatorias";
+import { Avisos } from "@/pages/Avisos";
+import { Eventos } from "@/pages/Eventos";
+import { Recursos } from "@/pages/Recursos";
+import { HazteSocia } from "@/pages/HazteSocia";
+import { Contacto } from "@/pages/Contacto";
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      
-      <section className="relative bg-primary min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
-        <DecorativeBars />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <Card className="bg-card p-8 lg:p-12 rounded-3xl shadow-2xl">
-              <div className="space-y-6">
-                <p className="text-xs lg:text-sm font-semibold tracking-[0.15em] uppercase text-accent">
-                  Asociación · A Coruña · Desde 2007
-                </p>
-                
-                <h1 className="text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-[0.95] tracking-tight">
-                  <span className="text-accent">TEJIENDO</span>
-                  <br />
-                  <span className="text-primary">REDES DE</span>
-                  <br />
-                  <span className="text-accent">OPORTUNIDAD</span>
-                </h1>
-                
-                <p className="text-base lg:text-lg text-foreground leading-relaxed max-w-xl">
-                  Trabajamos por la inclusión sociolaboral y el acompañamiento a 
-                  personas en situación de vulnerabilidad. Formación, orientación, 
-                  ayudas y red.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button 
-                    size="lg" 
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-base rounded-full px-8 shadow-lg transition-all hover:scale-105"
-                  >
-                    CONVOCATORIAS ABIERTAS
-                    <ArrowRight size={20} weight="bold" className="ml-2" />
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-semibold text-base rounded-full px-8 transition-all hover:scale-105"
-                  >
-                    QUÉ HACEMOS
-                  </Button>
-                </div>
-              </div>
-            </Card>
-            
-            <div className="hidden lg:block" />
-          </div>
-        </div>
-      </section>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre-nosotros" element={<About />} />
+          <Route path="/areas" element={<Areas />} />
+          <Route path="/convocatorias" element={<Convocatorias />} />
+          <Route path="/avisos" element={<Avisos />} />
+          <Route path="/eventos" element={<Eventos />} />
+          <Route path="/recursos" element={<Recursos />} />
+          <Route path="/hazte-socia" element={<HazteSocia />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

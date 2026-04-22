@@ -1,36 +1,85 @@
 # Planning Guide
 
-A landing page for XARELA Asociación, a social organization focused on creating networks of opportunity for vulnerable populations through training, guidance, and support.
+A comprehensive multi-page website for XARELA Asociación, a social organization focused on creating networks of opportunity for vulnerable populations through training, guidance, and support.
 
 **Experience Qualities**:
 1. **Professional** - Clean, structured layout that communicates credibility and organizational maturity
 2. **Welcoming** - Warm color palette and approachable typography that invites engagement
 3. **Dynamic** - Animated decorative elements that add visual interest without overwhelming content
 
-**Complexity Level**: Content Showcase (information-focused) - This is a hero landing page that presents the organization's mission and core call-to-actions for visitors to learn more or engage with open opportunities.
+**Complexity Level**: Light Application (multiple features with basic state) - This is a multi-page website with client-side routing, featuring comprehensive information about the organization across 9 distinct pages including home, about, areas, opportunities, notices, events, resources, membership, and contact.
 
 ## Essential Features
 
-**Hero Section with Navigation**
-- Functionality: Full-width hero with prominent headline, description, and CTAs
+**Multi-Page Navigation System**
+- Functionality: React Router-based navigation with 9 pages (Home, About, Areas, Convocatorias, Avisos, Eventos, Recursos, Hazte socia, Contacto)
+- Purpose: Enable users to explore comprehensive organization information
+- Trigger: User clicks navigation links
+- Progression: Click nav item → route changes → new page loads → active state updates
+- Success criteria: Smooth page transitions, active link highlighting, mobile-responsive hamburger menu
+
+**Home Page - Hero Section**
+- Functionality: Full-width hero with animated decorative bars, headline, description, and CTAs
 - Purpose: Immediately communicate organizational mission and drive action
 - Trigger: Page load
-- Progression: User views headline → reads description → clicks CTA
-- Success criteria: Clear value proposition, accessible navigation, functional CTA buttons
+- Progression: User views headline → reads description → clicks CTA to navigate
+- Success criteria: Clear value proposition, animated bars, functional navigation to Convocatorias and Areas
 
-**Animated Decorative Bars**
-- Functionality: Floating horizontal bars in brand colors with subtle animation
-- Purpose: Add visual dynamism and reinforce brand identity
-- Trigger: Page load with staggered animations
-- Progression: Bars animate in → float subtly → create depth
-- Success criteria: Smooth animations that enhance rather than distract
+**About Page**
+- Functionality: Organization history, mission, values, and community commitment
+- Purpose: Build trust and communicate organizational credibility
+- Trigger: Navigation from menu
+- Progression: User reads history → explores value cards → understands commitment
+- Success criteria: Clear information hierarchy, engaging value proposition cards
 
-**Navigation Menu**
-- Functionality: Horizontal menu with multiple sections
-- Purpose: Enable navigation to different site areas
-- Trigger: User interaction with nav items
-- Progression: Hover → visual feedback → click → navigation
-- Success criteria: Clear hover states, responsive behavior
+**Areas Page**
+- Functionality: 6 service areas with detailed descriptions and service lists
+- Purpose: Communicate comprehensive support offerings
+- Trigger: Navigation from menu or home page CTA
+- Progression: User browses area cards → understands services → identifies relevant support
+- Success criteria: Clear categorization, visual distinction between areas, comprehensive service details
+
+**Convocatorias Page**
+- Functionality: Listing of open and upcoming opportunities with filtering by status
+- Purpose: Drive engagement with available programs
+- Trigger: Navigation from menu or home page CTA
+- Progression: User views opportunities → reads details → clicks to register
+- Success criteria: Clear status badges, detailed requirements, prominent registration CTAs
+
+**Avisos Page**
+- Functionality: Important notices categorized by type (important, news, information)
+- Purpose: Keep community informed about updates
+- Trigger: Navigation from menu
+- Progression: User scans notices → reads relevant updates → stays informed
+- Success criteria: Visual type distinction, chronological ordering, clear notification subscription CTA
+
+**Eventos Page**
+- Functionality: Upcoming events with full details and registration
+- Purpose: Build community engagement and participation
+- Trigger: Navigation from menu
+- Progression: User browses events → finds relevant activity → registers
+- Success criteria: Visual event cards, comprehensive event details, registration CTAs
+
+**Recursos Page**
+- Functionality: Downloadable resources organized by category and external links
+- Purpose: Provide valuable tools and information access
+- Trigger: Navigation from menu
+- Progression: User finds resource → downloads or accesses link → utilizes material
+- Success criteria: Clear categorization, download buttons, working external links
+
+**Hazte Socia Page**
+- Functionality: Membership benefits display and registration form
+- Purpose: Drive membership growth and community building
+- Trigger: Navigation from menu
+- Progression: User learns benefits → fills form → submits membership request
+- Success criteria: Compelling benefits list, complete form fields, clear pricing, submission functionality
+
+**Contacto Page**
+- Functionality: Contact form, organization information, and location
+- Purpose: Enable direct communication with organization
+- Trigger: Navigation from menu
+- Progression: User fills contact form → submits inquiry → receives confirmation
+- Success criteria: Complete contact information, functional form, location display
 
 ## Edge Case Handling
 - **Mobile responsiveness**: Navigation collapses to hamburger menu, bars scale appropriately
