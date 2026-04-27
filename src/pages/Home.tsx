@@ -11,10 +11,10 @@ export function Home() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <Card className="bg-card p-8 lg:p-12 rounded-3xl shadow-2xl">
+          <Card className="bg-card p-8 lg:p-12 rounded-3xl shadow-2xl w-2xl">
             <div className="space-y-6">
               <p className="text-xs lg:text-sm font-semibold tracking-[0.15em] uppercase text-accent">
-                Asociación · A Coruña · Desde 2007
+                Asociación · Ourense · Desde 2007
               </p>
               
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-[0.95] tracking-tight">
